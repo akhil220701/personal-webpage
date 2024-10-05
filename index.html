@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marisetti Akhil's Personal Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sans-serif', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0fff0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(to bottom, #ff7f50, #ffcc99);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: slideInFromTop 1.5s ease-out forwards;
+        }
+        .header-left, .header-right {
+            flex: 1;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: bounceIn 2s ease-in-out;
+        }
+        .header-left {
+            background-image: url('https://www.nokia.com/sites/default/files/styles/scale_720_not_convert_webp/public/2023-02/nokia-refreshed-logo-2_1.png');
+        }
+        .header-right {
+            background-image: url('https://www.iith.ac.in/assets/images/logo.png');
+        }
+        .header-center {
+            flex: 2;
+            text-align: center;
+            font-family: 'Sans-serif', sans-serif;
+        }
+        .header-center h1 {
+            margin: 0 10px;
+            font-size: 2.5em;
+            animation: fadeInDown 2s ease-in-out;
+        }
+        .header-center p {
+            margin: 10px 0;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9966;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInFromTop 1.5s ease-out forwards;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #f0fff0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+        }
+        .home {
+            background: linear-gradient(to bottom, #e0ffff, #b3ecff);
+        }
+        .about {
+            background: linear-gradient(to bottom, #ccffcc, #e0ffff);
+        }
+        .projects {
+            background: linear-gradient(to bottom, #e6e6fa, #ccffcc);
+        }
+        .blogs {
+            background: linear-gradient(to bottom, #ffffe0, #e6e6fa);
+        }
+        .contact {
+            background: linear-gradient(to bottom, #fafad2, #ffffe0);
+        }
+        footer {
+            background: linear-gradient(to top, #98fb98, #32cd32);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            position: relative;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .icon {
+            font-size: 2em;
+            margin-right: 10px;
+            vertical-align: middle;
+            color: #555;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .icon:hover {
+            color: #32cd32;
+            transform: scale(1.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 5px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            animation: fadeInUp 1s ease-in-out forwards;
+            transition: color 0.3s;
+        }
+        ul li:hover {
+            color: #555;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInFromTop {
+            from { opacity: 0; transform: translateY(-100px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounceIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Add media queries for responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+            }
+            .header-left, .header-right {
+                height: 80px;
+                background-size: 100%;
+            }
+            .header-center h1 {
+                font-size: 2em;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-left, .header-right {
+                height: 60px;
+                background-size: 80%;
+            }
+            .header-center h1 {
+                font-size: 1.5em;
+            }
+            .header-center p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left"></div>
+    <div class="header-center">
+        <h1>Marisetti Akhil</h1>
+        <p>M.Tech RA Student at IIT Hyderabad</p>
+    </div>
+    <div class="header-right"></div>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="https://akhil220701.github.io/personal-webpage/blogs.html">Blogs</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="section home">
+    <h2><i class="fas fa-home icon"></i>Home</h2>
+    <p>Welcome to my personal webpage! I am Marisetti Akhil, an M.Tech RA student at IIT Hyderabad, working in WiCoN Lab under the guidance of Dr. Abhinav Kumar and interning at NOKIA, Nagavara, Bangalore.</p>
+</section>
+
+<section id="about" class="section about">
+    <h2><i class="fas fa-user icon"></i>About</h2>
+    <p>My research areas include working with waveforms that are useful for Beyond 5G and 6G technologies, such as Orthogonal Time Frequency Space Modulation.</p>
+</section>
+
+<section id="projects" class="section projects">
+    <h2><i class="fas fa-project-diagram icon"></i>Projects</h2>
+    <ul>
+        <li>Integrated Sensing And Communication (ISAC) using B5G and 6G technologies like Orthogonal Time Frequency Space (OTFS) modulation schemes and Machine Learning Techniques (Ongoing).</li>
+        <li>Simulation of OFDM using MATLAB and Python.</li>
+        <li>Simulation of Orthogonal Time Frequency Space Modulation.</li>
+        <li>Simulation and Performance Analysis of Intelligent Reflecting Surfaces (IRS).</li>
+        <li>Mitigation of Adjacent Channel Interference in Vehicular Communication using Power Allocation Scheme.</li>
+        <li>Single Image Super Resolution using Generative Adversarial Networks.</li>
+        <li>Simulation of CAN network using BusMaster Software.</li>
+    </ul>
+</section>
+
+<section id="blogs" class="section blogs">
+    <h2><i class="fas fa-blog icon"></i>Blogs</h2>
+    <p>Check out my latest blogs and articles on topics related to wireless communications and advanced modulation techniques.</p>
+</section>
+
+<section id="contact" class="section contact">
+    <h2><i class="fas fa-envelope icon"></i>Contact</h2>
+    <p><i class="fas fa-phone icon"></i>Mobile: 7989156788</p>
+    <p><i class="fas fa-envelope icon"></i>Email: <a href="mailto:akhil220701@gmail.com">akhil220701@gmail.com</a></p>
+    <p><i class="fab fa-linkedin icon"></i>LinkedIn: <a href="https://in.linkedin.com/in/akhil-marisetti-32a944193" target="_blank">Akhil Marisetti</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Marisetti Akhil</p>
+</footer>
+
+</body>
+</html>
