@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marisetti Akhil - Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sans-serif', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0fff0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(to bottom, #ff7f50, #ffcc99);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .header-left, .header-right {
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 20px;
+        }
+        .header-left {
+            background-image: url('https://www.nokia.com/sites/default/files/styles/scale_720_not_convert_webp/public/2023-02/nokia-refreshed-logo-2_1.png');
+        }
+        .header-right {
+            background-image: url('https://www.iith.ac.in/assets/images/logo.png');
+        }
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+            font-family: 'Sans-serif', sans-serif;
+        }
+        .header-center h1 {
+            margin: 0 10px;
+            font-size: 2.5em;
+        }
+        .header-center p {
+            margin: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9966;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #f0fff0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blogs {
+            background: linear-gradient(to bottom, #ffffe0, #e6e6fa);
+        }
+        footer {
+            background: linear-gradient(to top, #98fb98, #32cd32);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+        .icon {
+            font-size: 2em;
+            margin-right: 10px;
+            vertical-align: middle;
+            color: #555;
+        }
+        .blog-post {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left"></div>
+    <div class="header-center">
+        <h1>Marisetti Akhil</h1>
+        <p>M.Tech RA Student at IIT Hyderabad</p>
+    </div>
+    <div class="header-right"></div>
+</header>
+
+<nav>
+    <a href="index.html#home">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+
+<section id="blogs" class="section blogs">
+    <h2><i class="fas fa-blog icon"></i>Blogs</h2>
+
+    <div class="blog-post">
+        <h2>Orthogonal Time Frequency Space (OTFS) Modulation in 6G Communications</h2>
+        <p>As the development of 6G technologies continues to progress, one key enabler for achieving the ambitious performance goals of the sixth generation of wireless communications is <b>Orthogonal Time Frequency Space (OTFS)</b> modulation. This novel modulation scheme offers significant advantages over traditional techniques like OFDM (Orthogonal Frequency Division Multiplexing) used in 4G and 5G. In this blog, we will explore what OTFS is, how it works, and why it is critical for 6G networks.</p>
+
+        <h3>What is OTFS?</h3>
+        <p>OTFS is a 2D modulation technique designed to efficiently handle the challenges of wireless communication in time-varying and highly dynamic environments, such as high-mobility scenarios (e.g., vehicular and satellite communications). Unlike traditional modulation techniques like OFDM, which modulate information over time and frequency domains separately, OTFS spreads the information symbols over both time and frequency domains in a 2D plane, called the <b>delay-Doppler domain</b>.</p>
+
+        <h4>Key Features:</h4>
+        <ul>
+            <li><b>Resilience in High Mobility</b>: OTFS provides better performance in high-mobility environments by considering both the time and frequency shifts (Doppler effect) that occur due to motion.</li>
+            <li><b>Full Diversity</b>: By spreading data over the delay-Doppler domain, OTFS exploits the full diversity of the channel, making it robust against channel fading and time-frequency selectivity.</li>
+            <li><b>Improved Spectral Efficiency</b>: OTFS can lead to higher spectral efficiency compared to OFDM by utilizing channel information more effectively.</li>
+        </ul>
+
+        <h3>How Does OTFS Work?</h3>
+        <p>The OTFS modulation scheme maps data symbols to the delay-Doppler domain rather than the traditional time-frequency domain used by OFDM. The key steps involved in OTFS are:</p>
+
+        <ol>
+            <li><b>Delay-Doppler Representation</b>: OTFS transforms the time-frequency plane into the delay-Doppler domain using a combination of 2D transformations. This is achieved using a combination of <b>symplectic Fourier transform</b> (SFFT) and its inverse.</li>
+            <li><b>Modulation and Transmission</b>: The mapped symbols in the delay-Doppler domain are modulated and transmitted over the wireless channel.</li>
+            <li><b>Equalization and Detection</b>: At the receiver, the OTFS demodulates the signal and equalizes it based on the estimated channel properties in the delay-Doppler domain.</li>
+        </ol>
+
+        <h3>Why OTFS for 6G?</h3>
+        <p>OTFS offers several advantages that make it an ideal candidate for 6G modulation schemes:</p>
+
+        <ul>
+            <li><b>Support for High-Mobility Scenarios</b>: OTFS is ideal for environments with high-speed communication.</li>
+            <li><b>Enhanced Connectivity</b>: OTFS ensures better reliability and connectivity for massive machine-type communication and ultra-reliable low-latency communication.</li>
+            <li><b>Higher Spectral and Energy Efficiency</b>: OTFS optimizes the use of available spectrum, leading to improved energy efficiency.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>OTFS is a promising technology for the next generation of wireless communication, enabling 6G networks to meet the stringent requirements of high mobility, reliability, and efficiency. Its ability to leverage the full channel diversity and handle complex wireless environments makes it a standout candidate for the future of connectivity.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Marisetti Akhil</p>
+</footer>
+
+</body>
+</html>
